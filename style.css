@@ -6,15 +6,21 @@
 }
 
 body{
-    font-family: "Comic Sans";
+    font-family: "Open Sans";
     overflow: hidden;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background: rgb(123, 13,69);
-    background: linear-gradient(90deg, rgba(123,42,21,1) 0%, rgba(0,0,0,1) 52%, rgba(93,0,13,1) 100%);
+    background: rgb(28,236,80);
+    background: linear-gradient(90deg, rgba(28,236,80,1) 25%, rgba(28,142,236,1) 50%, rgba(255,214,0,1) 75%);
+}
+
+h1{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: xxx-large;
 }
 
 .mainbox{
