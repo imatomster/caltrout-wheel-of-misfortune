@@ -13,3 +13,4 @@ function rotateFunction(){
     }, 5000)    
 }
 
+// https://workshops.hackclub.com/spinning_wheel/
