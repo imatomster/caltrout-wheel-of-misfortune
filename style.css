@@ -61,7 +61,6 @@ span{
 
 .span1{
     clip-path: polygon(0 92%, 100% 50%, 0 8%);
-    background-color: #fffb00;
     top: 120px;
     left: 0;
 }
@@ -75,16 +74,34 @@ span{
   
 .span3{
     clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
-    background-color: #ffaa00;
     bottom: 0;
     left: 120px;
 }
   
 .span4{
     clip-path: polygon(50% 100%, 92% 0, 8% 0);
-    background-color: #22ff00;
     top: 0;
     left: 120px;
+}
+
+.box1 .span2, .box2 .span1{
+    background-color: #ffaa00;
+}
+
+.box1 .span3, .box2 .span4, .box1 .span1{
+    background-color: #fffb00;
+}
+
+.box2 .span2{
+    background-color: #22ff00;
+}
+
+.box1 .span4{
+    background-color: #7396e0;
+}
+
+.box2 .span3{
+    background-color: #ff5100;
 }
 
 .box1 .span3 b{
