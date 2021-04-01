@@ -1,5 +1,3 @@
-// https://workshops.hackclub.com/spinning_wheel/
-
 function rotateFunction(){
     // Spin in degrees
     var min = 1024;
