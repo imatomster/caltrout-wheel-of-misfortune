@@ -58,7 +58,7 @@ function updateAngle(deg){
 
 function getOption(){
     for(var i = 0; i < array.length; i++){
-        if(array[i].initial < 180 && array[i].terminal > 180){
+        if(array[i].initial < 202.5 && array[i].terminal > 202.5){
             return array[i].name;
         }
     }
