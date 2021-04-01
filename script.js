@@ -9,13 +9,13 @@ var array = [
     {name: "Adult", initial: 90, terminal: 135},
     {name: "Spawner", initial: 135, terminal: 180}
 ];
+var previous = 0;
 
 function rotateFunction(){
     // Generate degrees for a spin
-    var min = 1024;
-    var max = 9999;
-    var deg = (Math.random()*(max-min))+min;
-
+    var min = 23;
+    var max = 222;
+    var deg = 45 * Math.floor((Math.random()*(max-min))+min);
     // Track the spinning
     updateAngle(deg);
     // Actually spinning
@@ -33,32 +33,29 @@ function rotateFunction(){
         // After 5 seconds, add back the bouncing arrow and ability to click the button
         mainboxID.classList.add('animate');
         disablingTheButton.disabled = false;
+        previous = deg;
 
          // Start of the popups and getting what I landed on
-        console.log(getOption());
+        alert("You landed on " + getOption() + "!")
     }, 5000)    
 }
 
 function updateAngle(deg){
-    var fixedDeg =  deg%360;
-
+    var correctedDeg = deg - previous;
     for(var i = 0; i < array.length; i++){
-        array[i].initial += fixedDeg;
-        array[i].terminal += fixedDeg;
+        array[i].initial = (array[i].initial + correctedDeg) % 360;
+        array[i].terminal = (array[i].terminal + correctedDeg) % 360;
 
-        if(array[i].initial > 360){
-            array[i].initial -= 360;
+        if(correctedDeg < 0){
+            array[i].initial += 360;
+            array[i].terminal += 360;
         }
-        if(array[i].terminal > 360){
-            array[i].terminal -= 360;
-        }
-        console.log(array[i]);
     }
 } 
 
 function getOption(){
     for(var i = 0; i < array.length; i++){
-        if(array[i].initial < 202.5 && array[i].terminal > 202.5){
+        if(202.5 > array[i].initial && 202.5 < array[i].terminal){
             return array[i].name;
         }
     }
