@@ -34,7 +34,7 @@ h1{
     content: '';
     width: 64px;
     height: 64px;
-    background: url('leftArrow.png') no-repeat;
+    background: url('pictures/leftArrow.png') no-repeat;
     background-size: 64px;
     right: -60px;
     top: 50%;
