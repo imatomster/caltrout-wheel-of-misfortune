@@ -291,6 +291,7 @@ span b{
   
 .mainbox.animate:after{
     animation: animateArrow 0.7s ease infinite;
+    -webkit-animation: animateArrow 0.7s ease infinite;
 }
 
 @keyframes animateArrow{
