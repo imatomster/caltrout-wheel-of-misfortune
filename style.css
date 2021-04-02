@@ -1,3 +1,4 @@
+/* Separator: Basic Overall Styles */
 *{
     box-sizing: border-box;
     padding: 0;
@@ -23,6 +24,7 @@ h1{
     font-size: xxx-large;
 }
 
+/* Separator: Overall Wheel Styles */
 .mainbox{
     position: relative;
     width: 500px;
@@ -41,6 +43,19 @@ h1{
     transform: translateY(-50%) rotate(180deg);
 }
 
+.mainbox.animate:after{
+    animation: animateArrow 0.7s ease infinite;
+    -webkit-animation: animateArrow 0.7s ease infinite;
+}
+
+@keyframes animateArrow{
+    50%{right: -40px;}
+}
+
+@-webkit-keyframes animateArrow{
+    50%{right: -40px;}
+}
+
 .wheelHolder{
     position: relative;
     width: 100%;
@@ -53,6 +68,7 @@ h1{
     display: grid;
 }
 
+/* Separator: Slices */
 span{
     width: 50%;
     height: 50%;
@@ -266,6 +282,8 @@ span b{
     transform: rotate(345deg);
 }
 
+/* Separator: Spin Button */
+
 .spin{
     position: absolute;
     top: 50%;
@@ -288,12 +306,105 @@ span b{
     height: 70px;
     font-size: 20px;
 }
-  
-.mainbox.animate:after{
-    animation: animateArrow 0.7s ease infinite;
-    -webkit-animation: animateArrow 0.7s ease infinite;
+
+/* Separator: Modal Box */
+.modalBackground {
+	position: fixed;
+
+	display: none;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+	padding-top: 7rem;
+	left: 0;
+	top: 0;
+
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
-@keyframes animateArrow{
-    50%{right: -40px;}
+.modalPopup {
+	position: relative;
+
+	width: 80%;
+	height: 75%;
+	padding: 0;
+	margin: auto;
+
+	border: .1rem solid black;
+    background-color: lightgreen;
+	/* background-image: url("pictures/");
+  	background-size: cover;
+  	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; */
+
+	-webkit-animation-name: flowFromTop;
+  	-webkit-animation-duration: 0.3s;
+  	animation-name: flowFromTop;
+  	animation-duration: 0.3s;
+
+  	display: flex;
+  	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: stretch;
+	align-content: stretch;
+	justify-content: stretch;
+}
+
+.modalHeader {
+	background-color: #0099CC;
+	border-bottom: .05rem solid black;
+
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	font-size: 2.2rem;
+
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+  	align-items: center;
+  	justify-content: space-between;
+}
+
+.disableTextSelect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.modalText {
+	height: 100%;
+	text-align: center;
+	color: black;
+	font-size: 1.4rem;
+	padding: 2rem;
+	overflow: auto;
+}
+
+.modalText > p{
+	background: rgba(255,255,255,0.60);
+}
+
+.modalX {
+	color: white;
+	font-size: 2rem;
+}
+
+.modalX:hover {
+	cursor: pointer;
+	color: gray;
+	text-decoration: none;
+}
+
+@-webkit-keyframes flowFromTop {
+	from {top:-7rem; opacity:0} 
+	to {top:0; opacity:1}
+}
+
+@keyframes flowFromTop {
+	from {top:-7rem; opacity:0} 
+	to {top:0; opacity:1}
 }

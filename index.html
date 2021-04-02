@@ -9,7 +9,7 @@
         <h1>🐡 Salmon Wheel of Misfortune 🐟</h1>
         <br> <br> <br>
         
-        <div id="mainbox" class="mainbox">
+        <section id="mainbox" class="mainbox">
             <div id="wheelHolder" class="wheelHolder">
                 <div class="sliceHolder1">
                     <span class="spawnerSlice"><b>Spawner</b></span>
@@ -85,10 +85,27 @@
                 </div>
             </div>
             <button id="spin" class="spin" onclick="rotateFunction()">Spin</button>
-        </div>
+        </section>
         
+        <section class="modalBackground">
+            <div class="modalPopup">
+                <div class="modalHeader">
+
+                    <div class="disableTextSelect" style="color:#0099CC; margin: 10px">&times;</div>
+                    <div>
+                        <p>&#9925; Salmon Wheel of Misfortune! &#9973;</p>
+                    </div>
+                    <div class="modalX" style="margin: 10px;">&times;</div>
+                </div>
+                
+                <div class="modalText"></div>
+    
+            </div>
+        </section>
+
         <br><br>
         <h1>🐡 Tommy Hang 2021 🐟</h1>
-        <script src="script.js"></script>
+        <script src="wheelScript.js"></script>
+        <script src="modalScript.js"></script>
     </body>
 </html>
