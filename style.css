@@ -19,7 +19,7 @@ body{
 }
 
 h1{
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-family: "Comic Sans MS", "Comic Sans";
     font-size: xxx-large;
 }
 
@@ -41,7 +41,7 @@ h1{
     transform: translateY(-50%) rotate(180deg);
 }
 
-.box{
+.wheelHolder{
     position: relative;
     width: 100%;
     height: 100%;
@@ -50,6 +50,7 @@ h1{
     border: 10px solid #fff;
     overflow: hidden;
     transition: all 5s ease;
+    display: grid;
 }
 
 span{
@@ -57,83 +58,212 @@ span{
     height: 50%;
     display: inline-block;
     position: absolute;
-}
 
-.span1{
-    clip-path: polygon(0 92%, 100% 50%, 0 8%);
-    top: 120px;
-    left: 0;
-}
-  
-.span2{
-    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
-    background-color: #ff4fa1;
+    /* Combined Slice Class with the span */
+    -webkit-clip-path: polygon(100% 23.2%,0% 50%,100% 50%);
+    clip-path: polygon(100% 23.2%,0% 50%,100% 50%);
     top: 120px;
     right: 0;
 }
-  
-.span3{
-    clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
-    bottom: 0;
-    left: 120px;
-}
-  
-.span4{
-    clip-path: polygon(50% 100%, 92% 0, 8% 0);
-    top: 0;
-    left: 120px;
-}
 
-.box1 .span2, .box2 .span1{
-    background-color: #ffaa00;
-}
-
-.box1 .span3, .box2 .span4, .box1 .span1{
-    background-color: #fffb00;
-}
-
-.box2 .span2{
-    background-color: #22ff00;
-}
-
-.box1 .span4{
-    background-color: #7396e0;
-}
-
-.box2 .span3{
-    background-color: #ff5100;
-}
-
-.box1 .span3 b{
-    transform: translate(-50%, -50%) rotate(-270deg);
-}
- 
-.box1 .span1 b, .box2 .span1 b{
-   transform: translate(-50%, -50%) rotate(185deg);
-}
-
-.box2 .span3 b{
-   transform: translate(-50%, -50%) rotate(90deg);
- 
-}
- 
-.box1 .span4 b, .box2 .span4 b{
-   transform: translate(-50%, -50%) rotate(-85deg);
-}
- 
 span b{
-   font-size: 24px;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+    font-size: 20px;
+    position: absolute;
+    top: 40%;
+    right: 1%;
+    transform: translate(-50%, -50%);
  
 }
- 
-.box2{
-   width: 100%;
-   height: 100%;
-   transform: rotate(-135deg);
+
+.eggSlice {
+    background-color: orange;
+}
+
+.frySlice {
+    background-color: yellow;
+}
+
+.smoltSlice {
+    background-color: green;
+}
+
+.adultSlice {
+    background-color: lightblue;
+}
+
+.spawnerSlice {
+    background-color: red;
+}
+
+.spawnerSlice b{
+    left: 75%;
+}
+.sliceHolder1{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+}
+
+.sliceHolder2{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(15deg);
+}
+
+.sliceHolder3{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(30deg);
+}
+
+.sliceHolder4{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+}
+
+.sliceHolder5{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(60deg);
+}
+
+.sliceHolder6{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(75deg);
+}
+
+.sliceHolder7{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+}
+
+.sliceHolder8{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(105deg);
+}
+
+.sliceHolder9{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(120deg);
+}
+
+.sliceHolder10{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(135deg);
+}
+
+.sliceHolder11{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(150deg);
+}
+
+.sliceHolder12{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(165deg);
+}
+
+.sliceHolder13{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(180deg);
+}
+
+.sliceHolder14{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(195deg);
+}
+
+.sliceHolder15{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(210deg);
+}
+
+.sliceHolder16{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(225deg);
+}
+
+.sliceHolder17{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(240deg);
+}
+
+.sliceHolder18{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(255deg);
+}
+
+.sliceHolder19{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(270deg);
+}
+
+.sliceHolder20{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(285deg);
+}
+
+.sliceHolder21{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(300deg);
+}
+
+.sliceHolder22{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(315deg);
+}
+
+.sliceHolder23{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(330deg);
+}
+
+.sliceHolder24{
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    transform: rotate(345deg);
 }
 
 .spin{
