@@ -1,21 +1,39 @@
-// Angle of 0 degrees starts at initial side of Fry on the left and goes clockwise
+// Angle of 0 degrees starts at initial side of Spawner which is the top on the left and goes clockwise
 var array = [
-    {name: "Egg", initial: 180, terminal: 225},
-    {name: "Egg", initial: 225, terminal: 270},
-    {name: "Fry", initial: 270, terminal: 315},
-    {name: "Fry", initial: 315, terminal: 360},
-    {name: "Fry", initial: 0, terminal: 45},
-    {name: "Smolt", initial: 45, terminal: 90},
-    {name: "Adult", initial: 90, terminal: 135},
-    {name: "Spawner", initial: 135, terminal: 180}
+    {name: "Adult", initial: 0, terminal: 15},
+    {name: "Adult", initial: 0, terminal: 0},
+    {name: "Spawner", initial: 0, terminal: 0},
+    {name: "Egg", initial: 0, terminal: 0},
+    {name: "Egg", initial: 0, terminal: 0},
+    {name: "Egg", initial: 0, terminal: 0},
+    {name: "Egg", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Fry", initial: 0, terminal: 0},
+    {name: "Smolt", initial: 0, terminal: 0},
+    {name: "Smolt", initial: 0, terminal: 0},
+    {name: "Smolt", initial: 0, terminal: 0},
+    {name: "Smolt", initial: 0, terminal: 0}
 ];
 var previous = 0;
 
+window.onload = fillAngles();
+
 function rotateFunction(){
     // Generate degrees for a spin
-    var min = 23;
-    var max = 222;
-    var deg = 45 * Math.floor((Math.random()*(max-min))+min);
+    var min = 68;
+    var max = 667;
+    var deg = 7.5 + 15 * Math.floor((Math.random()*(max-min))+min);
     // Track the spinning
     updateAngle(deg);
     // Actually spinning
@@ -40,6 +58,13 @@ function rotateFunction(){
     }, 5000)    
 }
 
+function fillAngles(){
+    for(var i = 1; i < array.length; i++){
+        array[i].initial = array[i-1].terminal;
+        array[i].terminal = array[i].initial + 15;
+    }
+}
+
 function updateAngle(deg){
     var correctedDeg = deg - previous;
     for(var i = 0; i < array.length; i++){
@@ -55,7 +80,7 @@ function updateAngle(deg){
 
 function getOption(){
     for(var i = 0; i < array.length; i++){
-        if(202.5 > array[i].initial && 202.5 < array[i].terminal){
+        if(45 > array[i].initial && 45 < array[i].terminal){
             return array[i].name;
         }
     }
