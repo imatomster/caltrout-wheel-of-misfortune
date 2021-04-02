@@ -41,7 +41,7 @@ h1{
     transform: translateY(-50%) rotate(180deg);
 }
 
-.box{
+.wheelHolder{
     position: relative;
     width: 100%;
     height: 100%;
@@ -85,6 +85,7 @@ span{
 }
 
 .box1 .span2, .box2 .span1{
+    border: 1px solid #fff;
     background-color: #ffaa00;
 }
 

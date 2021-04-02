@@ -19,7 +19,7 @@ function rotateFunction(){
     // Track the spinning
     updateAngle(deg);
     // Actually spinning
-    document.getElementById('box').style.transform = "rotate(" + deg + "deg)";
+    document.getElementById('wheelHolder').style.transform = "rotate(" + deg + "deg)";
     
 
     // Remove the animate on the arrow bounce and button clicm
