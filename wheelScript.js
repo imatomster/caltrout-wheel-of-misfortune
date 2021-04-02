@@ -54,7 +54,7 @@ function rotateFunction(){
         previous = deg;
 
          // Start of the popups and getting what I landed on
-        alert("You landed on " + getOption() + "!")
+        optionModal();
     }, 5000)    
 }
 
