@@ -44,9 +44,11 @@ function welcomeModal() {
 
 function optionModal() {
     var option = getOption();
-    var result = "<p> You landed on " + option + "!</p>" ;
+    var result = "<p> You landed on " + array[option].name + "!</p> <br>";
+	result += "<p> " + array[option].text + "</p> <br> "
+	result += "<img src='" + array[option].pic +"' alt='"+array[option].name+"' style='height: 100%; width: 100%; object-fit: contain'>"
 
-    result += "<br> <br> <hr> <p> To spin again, close out of the popup! :) </p>"
+    result += "<br> <br> <hr> <br> <p> To spin again, close out of the popup! :) </p>"
 
     document.getElementsByClassName("modalText")[0].innerHTML = result;
 	setTimeout(openModal, 400);
