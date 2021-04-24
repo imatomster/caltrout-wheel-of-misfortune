@@ -34,10 +34,9 @@ function welcomeModal() {
 	result += 
 	"<p> CalTrout's Salmon Life Stages Wheel of Misfortune! <br><br> What are you waiting for? Click outside this popup or the X in the top right to start the game. </p>";
 
-    result +=
-    "<br><hr><br> <p> Here is a quick preview of the life stages of Salmon! </p> <br>";
+	result += "<br><hr><br> <p> Here is a quick preview of the life stages of Salmon! </p> <br>";
 
-	result+= "<img src ='pictures/cycle.jpg' style='height: 100%; width: 100%; object-fit: contain'>"
+	result += "<img src ='pictures/cycle.jpg' style='height: 100%; width: 100%; object-fit: contain'>"
 
 	document.getElementsByClassName("modalText")[0].innerHTML = result;
 	setTimeout(openModal, 300);
